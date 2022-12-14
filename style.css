@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    
+}
+.desktop-img {
+    display: none;
+}
+
+.container {
+    
+    width: calc(100% - 96px);
+    max-width: 1440px;
+    margin:0 auto;
+}
+
+.navigation {
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.nav {
+    display: none;
+}
+
+.logo-link {
+    display: block;
+    width: 50px;
+}
+
+/****** burger menu ******/
+
+.open-burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+
+
+.mobile-img {
+    margin: 1rem 0;
+}
+
+.mobile-img,
+.comp-img {
+    max-width: 100%;
+    
+    /* margin: ; */
+}
+
+.comp-img {
+    display: block;
+    width: 30%;
+    
+    /* max-width: 50%; */
+}
+
+.main-text,
+.evolution{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.bright-future {
+    font-size: 2rem;
+}
+
+.evolution  p {
+    letter-spacing: 1px;
+    line-height: 1.5;
+    opacity: .6;
+}
+
+
+.read-more {
+    background-color: hsl(5, 85%, 63%);
+    padding: 1rem 2rem;
+    width: fit-content;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 600;
+    font-size: .7rem;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-top: 1rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.read-more:hover,
+.read-more:focus {
+    background-color: hsl(240, 100%, 5%);
+    display: block;
+    transition: 1s;
+    
+}
+
+.dark-box {
+    background-color: hsl(240, 100%, 5%);
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0;
+    padding: 1rem ;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid grey;
+    padding: 2rem 0;
+    margin-top: 1rem;
+}
+article p {
+    padding-top: 1rem;
+    opacity: 0.5;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+.dark-box > h1 {
+   color: hsl(35, 77%, 62%);
+} 
+
+.section {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.gamers {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.computers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.1rem 0 0.1rem 1rem;
+    /* width: 50%; */
+}
+
+.computers h3 {
+    font-size: min(max(0.8rem, 3.5vw), 3rem)
+}
+.computers p {
+    font-size: min(max(0.2rem, 3vw), 2rem)
+}
+
+.computers h1 {
+    font-size: min(max(1rem, 8vw), 5rem);
+    color: silver;
+}
+.comp-img {
+    object-fit: cover;
+    
+}
+.computers a {
+    text-decoration: none;
+    color: black;
+}
+.computers a:hover,
+.computers a:focus {
+        color: hsl(5, 85%, 63%);
+    }
+
+article a {
+    text-decoration: none;
+    color: #FFF;
+}
+article a:hover,
+article a:focus {
+    color: hsl(35, 77%, 62%);
+}
+
+@media (min-width: 700px) {
+    .open-burger,
+    .close-burger {
+        display: none;
+    }
+    .flex {
+        flex-direction: column;
+    }
+        .mobile-img {
+            display: none;
+        }
+        .desktop-img {
+            display: inherit;
+            width: 100%;
+        }
+
+        .main-text {
+            margin-top: 2rem;
+            flex-direction: row;
+        }
+        .dark-box {
+            justify-content: space-between;
+            text-align: center;
+            width: 100%;
+        }
+        .dark-box h1 {
+            font-size: 3rem;
+        }
+        .bright-future {
+            width: 45%;
+            margin-right: 1rem;
+        }
+        .evolution {
+            width: 50%;
+        }
+        
+        .gamers {
+            flex-direction: row;
+        }
+        .comp-img {
+           display: block;
+           min-width: 100px;
+           gap: 1rem; 
+        }
+        .computers h3 {
+            font-size: 1.2rem;
+        }
+       
+        .computers p {
+            font-size: 1rem;
+        }
+        
+        .computers h1 {
+            font-size: 3rem;
+            
+        }
+        .nav {
+            display: inherit;
+        }
+    
+        .nav ul {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+        li a:hover,
+        li a:focus {
+            color: hsl(5, 85%, 63%);
+        }
+        li {
+            list-style:none;
+        }
+    
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+@media (min-width: 1000px) {
+    .mobile-img {
+        display: none;
+    }
+    .desktop-img {
+        display: inherit;
+        width: 100%;
+    }
+    .flex {
+        display: flex;
+        flex-direction: row;
+    }
+    .main-text {
+        margin-top: 2rem;
+        flex-direction: row;
+    }
+    .technology {
+        width: 70%;
+    }
+    .dark-box {
+        margin: 0 0 0 1rem;
+        justify-content: space-between;
+        width: 30%;
+        text-align: left;
+    }
+    .dark-box h1 {
+        font-size: 3rem;
+    }
+    .bright-future {
+        width: 45%;
+    }
+    .evolution {
+        width: 50%;
+    }
+    
+    .gamers {
+        flex-direction: row;
+    }
+    .comp-img {
+        display: block;
+        background-size: cover;
+        object-fit: cover;
+        
+        
+    }
+    .computers h3 {
+        font-size: 1.2rem;
+    }
+   
+    .computers p {
+        font-size: 1rem;
+    }
+    
+    .computers h1 {
+        font-size: 3rem;
+        
+    }
+    .nav {
+        display: inherit;
+    }
+
+    .nav ul {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+    li a {
+        text-decoration: none;
+        color: black;
+    }
+    li a:hover,
+    li a:focus {
+        color: hsl(5, 85%, 63%);
+    }
+    li {
+        list-style:none;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    
+    
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
